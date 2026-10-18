@@ -70,7 +70,7 @@ CREATE TABLE tblBill (
   note           VARCHAR(255)  NULL,
   managerID      INT           NOT NULL,
   serviceOrderID INT           NOT NULL,
-  CONSTRAINT chk_bill_amount CHECK (paymentAmount > 0),
+  CONSTRAINT uq_bill_order UNIQUE (serviceOrderID),
   FOREIGN KEY (managerID)      REFERENCES tblManager (userID),
   FOREIGN KEY (serviceOrderID) REFERENCES tblServiceOrder (id)
 );
