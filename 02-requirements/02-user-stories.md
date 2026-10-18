@@ -2,18 +2,18 @@
 
 Tất cả story có actor là **Manager**. Ưu tiên theo MoSCoW.
 
-| Mã | Tên | Ưu tiên | UC | BR liên quan |
-|---|---|---|---|---|
-| US01 | Thêm dịch vụ | Must | UC01 | BR01-BR04 |
-| US02 | Sửa dịch vụ | Must | UC02 | BR01-BR04, BR06, BR07 |
-| US03 | Xóa/ngừng dịch vụ | Must | UC03 | BR05 |
-| US04 | Tìm kiếm dịch vụ | Must | UC02, UC03 | BR08, BR16 |
-| US05 | Thống kê doanh thu theo dịch vụ | Must | UC04 | BR06, BR09, BR10, BR12, BR16 |
-| US06 | Xem hóa đơn chi tiết của một dịch vụ | Must | UC04 | BR13 |
-| US07 | Thống kê doanh thu theo khách hàng | Must | UC05 | BR09, BR10, BR12, BR16 |
-| US08 | Xem hóa đơn chi tiết của một khách hàng | Should | UC05 | BR13 |
-| US09 | Kiểm tra khoảng thời gian thống kê | Must | UC04, UC05 | BR11 |
-| US10 | Giới hạn truy cập cho Manager | Must | UC01-UC05 | BR14 |
+| Mã | Tên | UC | BR liên quan |
+|---|---|---|---|
+| US01 | Thêm dịch vụ | UC01 | BR01-BR04 |
+| US02 | Sửa dịch vụ | UC02 | BR01-BR04, BR06, BR07 |
+| US03 | Xóa/ngừng dịch vụ | UC03 | BR05 |
+| US04 | Tìm kiếm dịch vụ | UC02, UC03 | BR08, BR16 |
+| US05 | Thống kê doanh thu theo dịch vụ | UC04 | BR06, BR09, BR10, BR12, BR16 |
+| US06 | Xem hóa đơn chi tiết của một dịch vụ | UC04 | BR13 |
+| US07 | Thống kê doanh thu theo khách hàng | UC05 | BR09, BR10, BR12, BR16 |
+| US08 | Xem hóa đơn chi tiết của một khách hàng | UC05 | BR13 |
+| US09 | Kiểm tra khoảng thời gian thống kê | UC04, UC05 | BR11 |
+| US10 | Giới hạn truy cập cho Manager | UC01-UC05 | BR14 |
 
 ---
 
