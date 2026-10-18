@@ -23,4 +23,4 @@
 
 ## 3. Luồng dữ liệu giữa các vai trò (tóm tắt)
 
-Lễ tân ghi nhận đơn dịch vụ và lập hóa đơn → dữ liệu lưu vào CSDL tập trung → Manager đọc dữ liệu đó để xem báo cáo. Vì vậy chất lượng báo cáo của Manager phụ thuộc vào việc Lễ tân nhập dữ liệu đầy đủ và đúng.
+Nhân viên lễ tân ghi nhận đơn dịch vụ và lập hóa đơn → dữ liệu được lưu vào CSDL tập trung → nhân viên quản lý đọc dữ liệu đó để xem báo cáo. Vì vậy, chất lượng báo cáo của nhân viên quản lý phụ thuộc vào việc nhân viên lễ tân nhập dữ liệu đầy đủ và chính xác.
