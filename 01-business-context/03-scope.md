@@ -12,7 +12,7 @@ Repo này là tài liệu hóa cho module Quản lý dịch vụ và Báo cáo t
 | Đăng nhập, đổi mật khẩu, đăng xuất | Employee | Đặt giả định đã đăng nhập |
 | Quản lý tài khoản người dùng | Admin |  |
 | Quản lý thông tin spa | Manager |  |
-| Quản lý khách hàng, dịch vụ được yêu cầu, thanh toán | Receptionist | dữ liệu đầu vào)|
+| Quản lý khách hàng, dịch vụ được yêu cầu, thanh toán | Receptionist | Dữ liệu đầu vào |
 | Quản lý công việc, thống kê dịch vụ đã làm | Grooming |  |
 | **Thêm dịch vụ** | Manager | Chức năng của module |
 | **Sửa dịch vụ** | Manager | Chức năng của module |
