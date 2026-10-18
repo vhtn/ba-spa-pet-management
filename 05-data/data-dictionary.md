@@ -82,15 +82,13 @@ CSDL MySQL gồm 7 bảng. Module Quản lý dịch vụ & Báo cáo thống kê
 | description | VARCHAR(255) | NULL | Mô tả |
 
 ## Quan hệ giữa các bảng
-| Bảng con | Cột khóa ngoại | Bảng cha | Quan hệ |
-|---|---|---|---|
-| tblDetailServiceOrder | serviceOrderID | tblServiceOrder | n - 1 |
-| tblDetailServiceOrder | serviceID | tblService | n - 1 |
-| tblServiceOrder | clientID | tblClient | n - 1 |
-| tblServiceOrder | managerID | tblManager | n - 1 |
-| tblBill | serviceOrderID | tblServiceOrder | n - 1 |
-| tblBill | managerID | tblManager | n - 1 |
-| tblManager | userID | tblUser | 1 - 1 |
+tblDetailServiceOrder - tblServiceOrder là n - 1 
+tblDetailServiceOrder - tblService là n - 1 
+tblServiceOrder - tblClient là n - 1 
+tblServiceOrder - tblManager là n - 1 
+tblBill - tblServiceOrder là 1 - 1 
+tblBill - tblManager là n - 1 
+tblManager - tblUser là 1 - 1 
 
 ## Đường nối dữ liệu dùng cho báo cáo
 - **Theo dịch vụ:** tblService ← tblDetailServiceOrder → tblServiceOrder ← tblBill
