@@ -15,11 +15,11 @@
 
 | Stakeholder | Liên quan thế nào | Mức độ |
 |---|---|---|
-| Manager | Là actor trực tiếp, thực hiện mọi chức năng của module | Rất cao |
-| Lễ tân | Chọn dịch vụ từ danh mục Manager quản lý; **tạo hóa đơn là nguồn dữ liệu của báo cáo** | Cao (gián tiếp) |
-| Nhân viên chăm sóc | Dịch vụ họ thực hiện nằm trong danh mục; có xem thống kê riêng về việc đã làm | Trung bình |
-| Admin | Cấp tài khoản Manager để truy cập module | Thấp |
-| Khách hàng | Giá dịch vụ và hóa đơn ảnh hưởng trực tiếp đến họ | Gián tiếp |
+| **Quản lý (Manager)** | Là actor trực tiếp, thực hiện mọi chức năng của module | Rất cao |
+| **Lễ tân (Receptionist)** | Chọn dịch vụ từ danh mục Manager quản lý; **tạo hóa đơn là nguồn dữ liệu của báo cáo** | Cao (gián tiếp) |
+| **Nhân viên chăm sóc (Grooming)** | Dịch vụ họ thực hiện nằm trong danh mục; có xem thống kê riêng về việc đã làm | Trung bình |
+| **Quản trị hệ thống (Admin)** | Cấp tài khoản Manager để truy cập module | Thấp |
+| **Khách hàng** | Giá dịch vụ và hóa đơn ảnh hưởng trực tiếp đến họ | Gián tiếp |
 
 ## 3. Luồng dữ liệu giữa các vai trò (tóm tắt)
 
