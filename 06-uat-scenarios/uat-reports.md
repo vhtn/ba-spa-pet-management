@@ -34,11 +34,3 @@ Trạng thái mọi TC: Designed. Mọi TC ở file này **không làm thay đ�
 | TC-CLR-06 | Bắt đầu lớn hơn kết thúc | 31/10/2025 - 30/09/2025 | "Khoảng thời gian không hợp lệ" | US09 / BR11 |
 | TC-CLR-07 | Hóa đơn cuối ngày cuối kỳ *(mới)* | Như TC-SVR-07 với hóa đơn 03 của Lò Thị B | Doanh thu Lò Thị B = 350.000 + 150.000 = **500.000** | US07 / BR09 |
 
-## 3. Ràng buộc dữ liệu *(mới, tùy chọn)*
-
-| Mã | Mô tả | Thực hiện | Kết quả mong đợi | BR |
-|---|---|---|---|---|
-| TC-DAT-01 | Mỗi đơn chỉ có một hóa đơn | Chèn hóa đơn thứ hai cho đơn 01 (qua SQL) | CSDL từ chối (vi phạm UNIQUE `serviceOrderID`) | BR09, BR10 |
-| TC-DAT-02 | Không xóa cứng dịch vụ đã dùng | `DELETE FROM tblService WHERE id = 7` | CSDL từ chối (khóa ngoại RESTRICT) | BR05 |
-
-**Lưu ý cho TC-SVR-07 và TC-CLR-07:** Hóa đơn 03 là dữ liệu **thử**, thêm bằng câu INSERT ở Q7 trong `report-queries.sql` (gắn vào đơn 02 để cùng khách Lò Thị B và có Tắm cơ bản). Khi đó, kết quả TC-SVR-07: Tắm cơ bản SL 3 với hóa đơn 03 hay không phụ thuộc vào cách gắn; để đơn giản, nếu gắn vào đơn 02 thì **không** tạo thêm hóa đơn vì đã vi phạm UNIQUE. Cách đúng: tạo thêm **đơn 03** (khách Lò Thị B, 1 × Tắm cơ bản, 150.000) rồi hóa đơn 03 gắn vào đơn 03. Sau test, xóa dữ liệu thử để về lại dữ liệu chuẩn.
