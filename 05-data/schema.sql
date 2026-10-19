@@ -21,11 +21,21 @@ CREATE TABLE tblUser (
   address     VARCHAR(255) NOT NULL,
   phone       VARCHAR(10)  NOT NULL UNIQUE,
   email       VARCHAR(255) NOT NULL UNIQUE,
-  `position`  VARCHAR(255) NOT NULL,
   description VARCHAR(255) NULL
 );
-
 CREATE TABLE tblManager (
+  userID INT NOT NULL PRIMARY KEY,
+  FOREIGN KEY (userID) REFERENCES tblUser (id)
+);
+CREATE TABLE tblReceptionist (
+  userID INT NOT NULL PRIMARY KEY,
+  FOREIGN KEY (userID) REFERENCES tblUser (id)
+);
+CREATE TABLE tblGrooming (
+  userID INT NOT NULL PRIMARY KEY,
+  FOREIGN KEY (userID) REFERENCES tblUser (id)
+);
+CREATE TABLE tblAdmin (
   userID INT NOT NULL PRIMARY KEY,
   FOREIGN KEY (userID) REFERENCES tblUser (id)
 );
@@ -39,27 +49,29 @@ CREATE TABLE tblClient (
 );
 
 CREATE TABLE tblServiceOrder (
-  id        INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `date`    TIMESTAMP    NOT NULL,
-  note      VARCHAR(255) NULL,
-  managerID INT          NOT NULL,
-  clientID  INT          NOT NULL,
-  FOREIGN KEY (managerID) REFERENCES tblManager (userID),
-  FOREIGN KEY (clientID)  REFERENCES tblClient (id)
+  id             INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `date`         TIMESTAMP    NOT NULL,
+  note           VARCHAR(255) NULL,
+  clientID       INT          NOT NULL,
+  receptionistID INT          NOT NULL,
+  FOREIGN KEY (clientID)       REFERENCES tblClient (id),
+  FOREIGN KEY (receptionistID) REFERENCES tblReceptionist (userID)
 );
 
 CREATE TABLE tblDetailServiceOrder (
   id             INT           NOT NULL AUTO_INCREMENT PRIMARY KEY,
   quantity       INT           NOT NULL,
   status         VARCHAR(255)  NOT NULL,
-  price          DECIMAL(18,2) NOT NULL,     
+  price          DECIMAL(18,2) NOT NULL,      
   note           VARCHAR(255)  NULL,
   serviceOrderID INT           NOT NULL,
   serviceID      INT           NOT NULL,
+  groomingID     INT           NULL,
   CONSTRAINT chk_detail_qty   CHECK (quantity > 0),
   CONSTRAINT chk_detail_price CHECK (price > 0),
   FOREIGN KEY (serviceOrderID) REFERENCES tblServiceOrder (id),
-  FOREIGN KEY (serviceID)      REFERENCES tblService (id)
+  FOREIGN KEY (serviceID)      REFERENCES tblService (id),
+  FOREIGN KEY (groomingID)     REFERENCES tblGrooming (userID)
 );
 
 CREATE TABLE tblBill (
@@ -68,9 +80,10 @@ CREATE TABLE tblBill (
   paymentAmount  DECIMAL(18,2) NOT NULL,
   paymentType    VARCHAR(255)  NOT NULL,
   note           VARCHAR(255)  NULL,
-  managerID      INT           NOT NULL,
   serviceOrderID INT           NOT NULL,
+  receptionistID INT           NOT NULL,
+  CONSTRAINT chk_bill_amount CHECK (paymentAmount > 0),
   CONSTRAINT uq_bill_order UNIQUE (serviceOrderID),
-  FOREIGN KEY (managerID)      REFERENCES tblManager (userID),
-  FOREIGN KEY (serviceOrderID) REFERENCES tblServiceOrder (id)
+  FOREIGN KEY (serviceOrderID) REFERENCES tblServiceOrder (id),
+  FOREIGN KEY (receptionistID) REFERENCES tblReceptionist (userID)
 );
