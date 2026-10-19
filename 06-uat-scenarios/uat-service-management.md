@@ -14,8 +14,8 @@ Trạng thái mọi TC: Designed.
 | TC-ADD-04 | Giá âm | Mã 03, tên "Cắt cơ bản", giá -200.000 → Lưu | "Dữ liệu không hợp lệ"; OK quay lại form | Không đổi | US01 / BR03 |
 | TC-ADD-05 | Giá là chữ | Mã 03, giá "abc" → Lưu | "Dữ liệu không hợp lệ"; OK quay lại form | Không đổi | US01 / BR03 |
 | TC-ADD-06 | Thêm hai lần liên tiếp cùng mã | Lần 1: mã 03, "Cắt cơ bản", giá 200.000 → thành công. Lần 2: nhập lại y hệt | Lần 1 thành công; lần 2 "Dịch vụ đã tồn tại" | Chỉ có một dòng 03 | US01 / BR01 |
-| TC-ADD-07 | Giá bằng 0 *(mới)* | Mã 03, giá 0 → Lưu | "Dữ liệu không hợp lệ" | Không đổi | US01 / BR03 |
-| TC-ADD-08 | Bấm Hủy *(mới)* | Nhập một phần dữ liệu → Hủy | Về giao diện quản lý dịch vụ, không lưu | Không đổi | US01 / BR15 |
+| TC-ADD-07 | Giá bằng 0 | Mã 03, giá 0 → Lưu | "Dữ liệu không hợp lệ" | Không đổi | US01 / BR03 |
+| TC-ADD-08 | Bấm Hủy | Nhập một phần dữ liệu → Hủy | Về giao diện quản lý dịch vụ, không lưu | Không đổi | US01 / BR15 |
 
 ## 2. Sửa dịch vụ (UC02)
 
@@ -27,7 +27,7 @@ Trạng thái mọi TC: Designed.
 | TC-UPD-04 | Xóa trống tên | Chọn 01 → xóa tên → Lưu | "Điền đầy đủ thông tin"; OK quay lại form sửa giữ nội dung | Không đổi | US02 / BR02 |
 | TC-UPD-05 | Sửa giá âm | Chọn 01 → giá -200.000 → Lưu | "Dữ liệu không hợp lệ" | Không đổi | US02 / BR03 |
 | TC-UPD-06 | Sửa giá là chữ | Chọn 01 → giá "abc" → Lưu | "Dữ liệu không hợp lệ" | Không đổi | US02 / BR03 |
-| TC-UPD-07 | Kích hoạt lại dịch vụ đã ngừng *(mới, tùy chọn)* | Tiền điều kiện: 07 đang "Ngừng hoạt động". Chọn 07 → trạng thái "Đang hoạt động" → Lưu | "Cập nhật dịch vụ thành công" | 07 = Đang hoạt động | US02 / BR07 |
+| TC-UPD-07 | Kích hoạt lại dịch vụ đã ngừng | Tiền điều kiện: 07 đang "Ngừng hoạt động". Chọn 07 → trạng thái "Đang hoạt động" → Lưu | "Cập nhật dịch vụ thành công" | 07 = Đang hoạt động | US02 / BR07 |
 
 ## 3. Xóa dịch vụ (UC03)
 
