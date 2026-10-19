@@ -13,8 +13,8 @@ Login là use case dùng chung, Change password và Logout mở rộng Login.
 
 | Sơ đồ chi tiết | Ảnh |
 |---|---|
-| Quản lý dịch vụ | [uc-manage-service.png](uc-manage-service.png) |
-| Xem báo cáo | [uc-view-report.png](uc-view-report.png) |
+| Quản lý dịch vụ | [uc-manage-service.svg](uc-manage-service.svg) |
+| Xem báo cáo | [uc-view-report.svg](uc-view-report.svg) |
 
 ## Đặc tả use case
 
