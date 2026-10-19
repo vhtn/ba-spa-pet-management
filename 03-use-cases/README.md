@@ -8,6 +8,9 @@ Mô hình use case của hệ thống spa thú cưng và đặc tả chi tiết 
 
 ![Use case tổng quan](system-use-case-overview.svg)
 
+Actor "User" là tổng quát hoá 4 vai trò (Admin, Manager, Receptionist, Grooming);
+Login là use case dùng chung, Change password và Logout mở rộng Login.
+
 | Sơ đồ chi tiết | Ảnh |
 |---|---|
 | Quản lý dịch vụ | [uc-manage-service.png](uc-manage-service.png) |
