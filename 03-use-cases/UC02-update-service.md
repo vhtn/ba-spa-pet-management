@@ -22,10 +22,10 @@
 
    | ID | Tên | Đơn vị | Giá | Trạng thái | |
    |---|---|---|---|---|---|
-   | 001 | Tắm cơ bản | 0-5 kg | 150.000 | Đang hoạt động | Chọn |
-   | 007 | Tắm massage | 0-5 kg | 200.000 | Đang hoạt động | Chọn |
+   | 01 | Tắm cơ bản | 0-5 kg | 150.000 | Đang hoạt động | Chọn |
+   | 07 | Tắm massage | 0-5 kg | 200.000 | Đang hoạt động | Chọn |
 
-7. Manager bấm Chọn ở dòng thứ hai (mã 007).
+7. Manager bấm Chọn ở dòng thứ hai (mã 07).
 8. Hệ thống hiển thị form sửa với dữ liệu hiện tại: mã = 07 (**bị khóa, không sửa được**), tên = "Tắm massage", đơn vị = "0-5 kg", giá = 200.000, mô tả trống, trạng thái (danh sách chọn) = "Đang hoạt động", và hai nút Lưu, Hủy.
 9. Manager sửa mô tả thành "Massage thư giãn" và bấm Lưu.
 10. Hệ thống kiểm tra dữ liệu (theo BR04) và cập nhật.
