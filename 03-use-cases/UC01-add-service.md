@@ -16,7 +16,7 @@
 2. Hệ thống hiển thị giao diện quản lý dịch vụ với 3 nút: Thêm, Sửa, Xóa dịch vụ.
 3. Manager bấm nút Thêm dịch vụ.
 4. Hệ thống hiển thị form thêm dịch vụ gồm các ô: mã dịch vụ, tên, đơn vị, giá, mô tả, trạng thái (danh sách chọn) và hai nút Lưu, Hủy.
-5. Manager nhập: mã = 010, tên = "Cắt cơ bản", đơn vị = "0-5 kg", giá = 200.000, mô tả để trống, trạng thái = "Đang hoạt động", rồi bấm Lưu.
+5. Manager nhập: mã = 10, tên = "Cắt cơ bản", đơn vị = "0-5 kg", giá = 200.000, mô tả để trống, trạng thái = "Đang hoạt động", rồi bấm Lưu.
 6. Hệ thống kiểm tra dữ liệu (theo thứ tự BR04) và lưu dịch vụ.
 7. Hệ thống hiển thị "Thêm dịch vụ mới thành công" cùng nút OK.
 8. Manager bấm OK.
@@ -33,4 +33,3 @@
 
 ## Ghi chú
 - Khi nhiều lỗi cùng xảy ra, chỉ báo lỗi đầu tiên theo thứ tự: bắt buộc → định dạng/giá trị → trùng mã (BR04).
-- Mã hiển thị 3 chữ số (010); trong CSDL lưu số nguyên 10.
