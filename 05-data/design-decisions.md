@@ -29,5 +29,5 @@
 ## 3. Hạn chế đã biết
 
 - Chưa có giảm giá, phụ thu nên `paymentAmount` luôn bằng tổng `quantity × price` của đơn. Khi có giảm giá, hai cách tính doanh thu (theo dịch vụ, theo khách hàng) cho tổng khác nhau.
-- `tblServiceOrder` và `tblBill` đều tham chiếu đến `tblManager`, tức là chỉ Manager được ghi nhận là người lập. Phân tích hệ thống có vai trò Lễ tân (lập hóa đơn) và Chăm sóc (thực hiện dịch vụ) nhưng ERD chưa có bảng riêng cho hai vai trò này. Đây là đơn giản hóa phù hợp phạm vi module Manager; nếu mở rộng cho cả hệ thống cần thêm `tblReceptionist`, `tblGrooming` và tách khóa ngoại.
+- `tblServiceOrder` và `tblBill` đều tham chiếu đến `tblManager`, tức là chỉ Manager được ghi nhận là người lập. Phân tích hệ thống có vai trò Lễ tân (lập hóa đơn) và Chăm sóc (thực hiện dịch vụ), nhưng ERD chưa có bảng riêng cho hai vai trò này. Đây là đơn giản hóa phù hợp với phạm vi module Manager; nếu mở rộng cho cả hệ thống, cần thêm `tblReceptionist`, `tblGrooming` và tách khóa ngoại.
 - Chưa có bảng thông tin spa (tên, địa chỉ, mô tả) dù mô tả nghiệp vụ có nhắc tới; nằm ngoài module này.
