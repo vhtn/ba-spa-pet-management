@@ -1,7 +1,6 @@
 # Traceability Matrix
 
-Ma trận truy vết giữa quy tắc nghiệp vụ (BR), user story (US), use case (UC) và
-test case (TC), để chứng minh mọi yêu cầu đều có kiểm thử.
+Ma trận truy vết giữa quy tắc nghiệp vụ (BR), user story (US), use case (UC) và test case (TC), để chứng minh mọi yêu cầu đều có kiểm thử.
 
 ## 1. Business Rule → User Story → Use Case → Test Case
 
@@ -26,18 +25,18 @@ test case (TC), để chứng minh mọi yêu cầu đều có kiểm thử.
 
 ## 2. User Story → Use Case → Test Case
 
-| US | Tên | Ưu tiên | UC | Test case | Số TC |
+| US | Tên | UC | Test case | Số TC |
 |---|---|---|---|---|---|
-| US01 | Thêm dịch vụ | Must | UC01 | TC-ADD-01 đến 09 | 9 |
-| US02 | Sửa dịch vụ | Must | UC02 | TC-UPD-01, 03, 04, 05, 06, 07 | 6 |
-| US03 | Xóa / ngừng dịch vụ | Must | UC03 | TC-DEL-01, 03, 04, 05 | 4 |
-| US04 | Tìm kiếm dịch vụ | Must | UC02, UC03 | TC-UPD-02; TC-DEL-02, 06 | 3 |
-| US05 | Thống kê theo dịch vụ | Must | UC04 | TC-SVR-01, 02, 07, 08, 09 | 5 |
-| US06 | Hóa đơn chi tiết của dịch vụ | Must | UC04 | TC-SVR-01 | 1 |
-| US07 | Thống kê theo khách hàng | Must | UC05 | TC-CLR-01, 02, 07 | 3 |
-| US08 | Hóa đơn chi tiết của khách hàng | Should | UC05 | TC-CLR-01 | 1 |
-| US09 | Kiểm tra khoảng thời gian | Must | UC04, UC05 | TC-SVR-03 đến 06; TC-CLR-03 đến 06 | 8 |
-| US10 | Giới hạn truy cập Manager | Must | UC01-UC05 | TC-SEC-01, 02 | 2 |
+| US01 | Thêm dịch vụ | UC01 | TC-ADD-01 đến 09 | 9 |
+| US02 | Sửa dịch vụ | UC02 | TC-UPD-01, 03, 04, 05, 06, 07 | 6 |
+| US03 | Xóa / ngừng dịch vụ | UC03 | TC-DEL-01, 03, 04, 05 | 4 |
+| US04 | Tìm kiếm dịch vụ | UC02, UC03 | TC-UPD-02; TC-DEL-02, 06 | 3 |
+| US05 | Thống kê theo dịch vụ | UC04 | TC-SVR-01, 02, 07, 08, 09 | 5 |
+| US06 | Hóa đơn chi tiết của dịch vụ | UC04 | TC-SVR-01 | 1 |
+| US07 | Thống kê theo khách hàng | UC05 | TC-CLR-01, 02, 07 | 3 |
+| US08 | Hóa đơn chi tiết của khách hàng | UC05 | TC-CLR-01 | 1 |
+| US09 | Kiểm tra khoảng thời gian | UC04, UC05 | TC-SVR-03 đến 06; TC-CLR-03 đến 06 | 8 |
+| US10 | Giới hạn truy cập Manager | UC01-UC05 | TC-SEC-01, 02 | 2 |
 
 ## 3. Use Case → Test Case
 
@@ -62,6 +61,5 @@ test case (TC), để chứng minh mọi yêu cầu đều có kiểm thử.
 
 ## 5. Hạn chế đã biết
 
-- TC-SEC phụ thuộc module đăng nhập do thành viên khác phụ trách; ở đây chỉ mô tả kết quả mong đợi.
-- Các TC ở trạng thái "Designed", chưa chạy trên hệ thống nên chưa có kết quả Pass/Fail.
-- BR06 mới có một TC kiểm tra trực tiếp; nên bổ sung nếu có thêm thời gian.
+- TC-SEC phụ thuộc vào module đăng nhập do thành viên khác phụ trách; ở đây chỉ mô tả kết quả mong đợi.
+- Các TC ở trạng thái "Designed" chưa chạy trên hệ thống nên chưa có kết quả Pass/Fail.
