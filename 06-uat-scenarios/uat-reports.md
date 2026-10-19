@@ -19,8 +19,8 @@ Trạng thái mọi TC: Designed. Mọi TC ở file này **không làm thay đ�
 | TC-SVR-04 | Sai định dạng | Bắt đầu "1 tháng 9 năm 2025", kết thúc 30/09/2025 → Áp dụng | "Ngày tháng không hợp lệ" + OK | US09 / BR11 |
 | TC-SVR-05 | Để trống ngày bắt đầu | Bắt đầu trống, kết thúc 30/09/2025 → Áp dụng | "Điền đầy đủ thông tin" + OK | US09 / BR11 |
 | TC-SVR-06 | Ngày bắt đầu lớn hơn kết thúc | Bắt đầu 31/10/2025, kết thúc 30/09/2025 → Áp dụng | "Khoảng thời gian không hợp lệ" + OK | US09 / BR11 |
-| TC-SVR-07 | **Hóa đơn cuối ngày cuối kỳ** *(mới)* | Tiền điều kiện: thêm hóa đơn 03, thanh toán **30/09/2025 23:30**, cho đơn có dịch vụ Tắm cơ bản (xem lưu ý). Kỳ 01/09 - 30/09/2025 | Hóa đơn 03 **vẫn được tính** trong kỳ, không bị bỏ sót | US05 / BR09 |
-| TC-SVR-08 | Hóa đơn ngoài kỳ không được tính *(mới, tùy chọn)* | Kỳ 01/09/2025 - 02/09/2025 | Chỉ hóa đơn 01: Tắm cơ bản SL 2, 300.000; không có Tắm massage | US05 / BR09 |
+| TC-SVR-07 | **Hóa đơn cuối ngày cuối kỳ** | Tiền điều kiện: thêm hóa đơn 03, thanh toán **30/09/2025 23:30**, cho đơn có dịch vụ Tắm cơ bản (xem lưu ý). Kỳ 01/09 - 30/09/2025 | Hóa đơn 03 **vẫn được tính** trong kỳ, không bị bỏ sót | US05 / BR09 |
+| TC-SVR-08 | Hóa đơn ngoài kỳ không được tính | Kỳ 01/09/2025 - 02/09/2025 | Chỉ hóa đơn 01: Tắm cơ bản SL 2, 300.000; không có Tắm massage | US05 / BR09 |
 
 ## 2. Thống kê doanh thu theo khách hàng (UC05)
 
@@ -32,5 +32,4 @@ Trạng thái mọi TC: Designed. Mọi TC ở file này **không làm thay đ�
 | TC-CLR-04 | Sai định dạng | Bắt đầu "1 tháng 9 năm 2025", kết thúc 30/09/2025 | "Ngày tháng không hợp lệ" | US09 / BR11 |
 | TC-CLR-05 | Để trống ngày bắt đầu | Bắt đầu trống, kết thúc 30/09/2025 (**ở màn thống kê khách hàng**) | "Điền đầy đủ thông tin" | US09 / BR11 |
 | TC-CLR-06 | Bắt đầu lớn hơn kết thúc | 31/10/2025 - 30/09/2025 | "Khoảng thời gian không hợp lệ" | US09 / BR11 |
-| TC-CLR-07 | Hóa đơn cuối ngày cuối kỳ *(mới)* | Như TC-SVR-07 với hóa đơn 03 của Lò Thị B | Doanh thu Lò Thị B = 350.000 + 150.000 = **500.000** | US07 / BR09 |
-
+| TC-CLR-07 | Hóa đơn cuối ngày cuối kỳ | Như TC-SVR-07 với hóa đơn 03 của Lò Thị B | Doanh thu Lò Thị B = 350.000 + 150.000 = **500.000** | US07 / BR09 |
