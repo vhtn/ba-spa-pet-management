@@ -1,15 +1,18 @@
 # Data Dictionary
 
-CSDL MySQL gồm 7 bảng. Module Quản lý dịch vụ & Báo cáo thống kê **ghi** vào`tblService`, **chỉ đọc** các bảng còn lại.
+CSDL MySQL gồm 10 bảng. Module Quản lý dịch vụ & Báo cáo thống kê **ghi** vào`tblService`, **chỉ đọc** các bảng còn lại.
 
 | Bảng | Quyền của module | Ghi chú |
 |---|---|---|
 | tblService | Đọc/Ghi (thêm, sửa, xóa mềm) | Dữ liệu của module này |
 | tblDetailServiceOrder | Chỉ đọc | Nguồn tính doanh thu theo dịch vụ |
 | tblServiceOrder | Chỉ đọc | Nối dịch vụ, hóa đơn, khách hàng |
-| tblBill | Chỉ đọc | Nguồn lọc kỳ (paymentDay) và doanh thu theo khách hàng |
+| tblBill | Chỉ đọc |  |
 | tblClient | Chỉ đọc | Thông tin khách hàng trong báo cáo |
 | tblManager | Chỉ đọc | Xác định người có vai trò Manager |
+| tblReceptionist | Chỉ đọc | Xác định người có vai trò Receptionist |
+| tblGrooming | Chỉ đọc | Xác định người có vai trò Grooming |
+| tblAdmin | Chỉ đọc | Xác định người có vai trò Admin |
 | tblUser | Không dùng trực tiếp | Thông tin tài khoản |
 
 ## tblService
@@ -32,6 +35,7 @@ CSDL MySQL gồm 7 bảng. Module Quản lý dịch vụ & Báo cáo thống kê
 | note | VARCHAR(255) | NULL | Ghi chú |
 | serviceOrderID | INT | FK → tblServiceOrder.id | Thuộc đơn nào |
 | serviceID | INT | FK → tblService.id (RESTRICT) | Dịch vụ nào |
+| groomingID | INT | FK → tblGrooming.userID | Nhân viên chăm sóc thực hiện dòng dịch vụ này|
 
 ## tblServiceOrder
 | Trường | Kiểu | Ràng buộc | Mô tả |
@@ -39,7 +43,7 @@ CSDL MySQL gồm 7 bảng. Module Quản lý dịch vụ & Báo cáo thống kê
 | id | INT | PK, tự tăng | Mã đơn |
 | date | TIMESTAMP | NOT NULL | Thời điểm sử dụng dịch vụ |
 | note | VARCHAR(255) | NULL | Ghi chú |
-| managerID | INT | FK → tblManager.userID | Manager phụ trách đơn |
+| receptionistID | INT | FK → tblReceptionist.userID | Lễ tân phụ trách đơn |
 | clientID | INT | FK → tblClient.id | Khách hàng của đơn |
 
 ## tblBill
@@ -50,7 +54,7 @@ CSDL MySQL gồm 7 bảng. Module Quản lý dịch vụ & Báo cáo thống kê
 | paymentAmount | DECIMAL(18,2) | NOT NULL, > 0 | Số tiền thực thu, VNĐ |
 | paymentType | VARCHAR(255) | NOT NULL | "Tiền mặt", "Chuyển khoản", "Thẻ tín dụng" |
 | note | VARCHAR(255) | NULL | Ghi chú |
-| managerID | INT | FK → tblManager.userID | Manager lập hóa đơn |
+| receptionistID | INT | FK → tblReceptionist.userID | Lễ tân lập hóa đơn |
 | serviceOrderID | INT | FK → tblServiceOrder.id | Hóa đơn của đơn nào |
 
 ## tblClient
@@ -67,6 +71,21 @@ CSDL MySQL gồm 7 bảng. Module Quản lý dịch vụ & Báo cáo thống kê
 |---|---|---|---|
 | userID | INT | PK + FK → tblUser.id | Manager là một User (quan hệ 1-1, kế thừa) |
 
+## tblReceptionist
+| Trường | Kiểu | Ràng buộc | Mô tả |
+|---|---|---|---|
+| userID | INT | PK + FK → tblUser.id | Receptionist là một User (quan hệ 1-1, kế thừa) |
+
+## tblGroomin
+| Trường | Kiểu | Ràng buộc | Mô tả |
+|---|---|---|---|
+| userID | INT | PK + FK → tblUser.id | Grooming là một User (quan hệ 1-1, kế thừa) |
+
+## tblAdmin
+| Trường | Kiểu | Ràng buộc | Mô tả |
+|---|---|---|---|
+| userID | INT | PK + FK → tblUser.id | Admin là một User (quan hệ 1-1, kế thừa) |
+
 ## tblUser
 | Trường | Kiểu | Ràng buộc | Mô tả |
 |---|---|---|---|
@@ -78,17 +97,16 @@ CSDL MySQL gồm 7 bảng. Module Quản lý dịch vụ & Báo cáo thống kê
 | address | VARCHAR(255) | NOT NULL | Địa chỉ |
 | phone | VARCHAR(10) | NOT NULL, UNIQUE | Số điện thoại |
 | email | VARCHAR(255) | NOT NULL, UNIQUE | Email |
-| position | VARCHAR(255) | NOT NULL | Chức vụ |
 | description | VARCHAR(255) | NULL | Mô tả |
 
 ## Quan hệ giữa các bảng
 tblDetailServiceOrder - tblServiceOrder là n - 1 
 tblDetailServiceOrder - tblService là n - 1 
 tblServiceOrder - tblClient là n - 1 
-tblServiceOrder - tblManager là n - 1 
+tblServiceOrder - tblReceptionít là n - 1 
 tblBill - tblServiceOrder là 1 - 1 
-tblBill - tblManager là n - 1 
-tblManager - tblUser là 1 - 1 
+tblBill - tblReceptionist là n - 1 
+tblManager, tblReceptionist, tblGrooming, tblAdmin kế thừa từ tblUser 
 
 ## Đường nối dữ liệu dùng cho báo cáo
 - **Theo dịch vụ:** tblService ← tblDetailServiceOrder → tblServiceOrder ← tblBill
