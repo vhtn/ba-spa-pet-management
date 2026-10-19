@@ -27,7 +27,7 @@ Mô hình use case của hệ thống spa thú cưng và đặc tả chi tiết 
 
 **Tổng quan toàn hệ thống** (hai use case Manage service và View report là phạm vi của tôi):
 
-![Use case tổng quan](system-use-case-overview.png)
+![Use case tổng quan](system-use-case-overview.svg)
 
 | Sơ đồ chi tiết | Ảnh |
 |---|---|
