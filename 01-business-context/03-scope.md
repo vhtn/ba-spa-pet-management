@@ -45,7 +45,7 @@ Repo này là tài liệu hóa cho module Quản lý dịch vụ và Báo cáo t
 
 - Người dùng đã đăng nhập với vai trò Manager trước khi vào module.
 - Đơn dịch vụ và hóa đơn do module nhân viên lễ tân tạo; module này chỉ đọc dữ liệu đó.
-- Mỗi hóa đơn gắn với đúng một đơn dịch vụ.
+- Mỗi đơn dịch vụ có tối đa một hóa đơn
 - Giá dịch vụ được lưu cùng chi tiết đơn tại thời điểm sử dụng, nên sửa giá về sau không làm thay đổi doanh thu quá khứ.
 - Chưa xét giảm giá, phụ thu, khuyến mãi (xem mục 4 Ngoài phạm vi).
 - Dữ liệu dùng để minh họa là dữ liệu mẫu, không phải dữ liệu thật của spa.
