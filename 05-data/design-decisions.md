@@ -21,10 +21,11 @@
 | 5 | Doanh thu dịch vụ tính từ chi tiết đơn, doanh thu khách hàng tính từ hóa đơn | Một hóa đơn gồm nhiều dịch vụ nên cần tách theo dịch vụ; khách hàng dùng số tiền thực thu | BR10 |
 | 6 | Lọc kỳ theo `paymentDay`, không theo ngày sử dụng | Doanh thu là tiền đã thu, ghi nhận lúc thanh toán | BR09 |
 | 7 | tblBill không có `clientID` | Tránh lưu dư; khách hàng suy ra qua tblServiceOrder | , |
-| 8 | Tách `tblManager` khỏi `tblUser` (Manager là một User, quan hệ 1-1) | Mô hình hóa vai trò bằng kế thừa; các bảng nghiệp vụ chỉ tham chiếu người có quyền Manager | BR14 |
+| 8 | Tách 4 bảng vai trò (Manager, Receptionist, Grooming, Admin) khỏi `tblUser` (quan hệ 1-1) | Mô hình hóa vai trò bằng kế thừa; các bảng nghiệp vụ chỉ tham chiếu đúng vai trò được phép | BR14 |
 | 9 | Dùng TIMESTAMP cho `paymentDay`; lọc kỳ bằng nửa khoảng mở `[bắt đầu, kết thúc + 1)` | Tránh bỏ sót hóa đơn trong ngày cuối kỳ | BR09 |
 | 10 | Ràng buộc UNIQUE cho `phone` (tblClient, tblUser), `email`, `username` (tblUser) | Tránh trùng khách hàng/tài khoản | , |
 | 11 |	Quan hệ tblServiceOrder - tblBill là 1 - 1, ép bằng UNIQUE trên tblBill.serviceOrderID | Mỗi đơn thanh toán một lần nên doanh thu không bị tính trùng; đồng thời tổng chi tiết dịch vụ khớp số tiền hóa đơn	| BR09, BR10|
+
 ## 3. Hạn chế đã biết
 
 - Chưa có giảm giá, phụ thu nên `paymentAmount` luôn bằng tổng `quantity × price` của đơn. Khi có giảm giá, hai cách tính doanh thu (theo dịch vụ, theo khách hàng) cho tổng khác nhau.
