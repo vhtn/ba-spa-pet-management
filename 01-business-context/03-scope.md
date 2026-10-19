@@ -31,8 +31,7 @@ Repo này là tài liệu hóa cho module Quản lý dịch vụ và Báo cáo t
 ## 4. Ngoài phạm vi (không làm trong phiên bản này)
 
 - Đăng nhập, phân quyền chi tiết, quản lý tài khoản.
-- Tạo đơn dịch vụ, lập hóa đơn, thanh toán (do module Lễ tân đảm nhiệm).
-- Báo cáo doanh thu theo tuần/tháng/năm, tỉ lệ sử dụng dịch vụ, khách hàng đặt lịch nhiều → ghi nhận ở `07-improvement-proposals/`.
+- Đặt lịch, tạo đơn dịch vụ, lập hóa đơn, thanh toán (do module Lễ tân đảm nhiệm).
 - Xuất báo cáo ra file, biểu đồ.
 - Giảm giá, phụ thu, khuyến mãi.
 
