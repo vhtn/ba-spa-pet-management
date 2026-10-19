@@ -26,7 +26,7 @@ Ma trận truy vết giữa quy tắc nghiệp vụ (BR), user story (US), use c
 ## 2. User Story → Use Case → Test Case
 
 | US | Tên | UC | Test case | Số TC |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | US01 | Thêm dịch vụ | UC01 | TC-ADD-01 đến 09 | 9 |
 | US02 | Sửa dịch vụ | UC02 | TC-UPD-01, 03, 04, 05, 06, 07 | 6 |
 | US03 | Xóa / ngừng dịch vụ | UC03 | TC-DEL-01, 03, 04, 05 | 4 |
@@ -57,7 +57,7 @@ Ma trận truy vết giữa quy tắc nghiệp vụ (BR), user story (US), use c
 | Business rule | 16 | 16 | BR06, BR14 chỉ có 1-2 TC |
 | User story | 10 | 10 | US06, US08 chỉ có 1 TC (nằm trong luồng tổng) |
 | Use case | 5 | 5 | |
-| Test case | 42 | , | 30 TC gốc đã sửa + 12 TC mới |
+| Test case | 42 | | 30 TC gốc đã sửa + 12 TC mới |
 
 ## 5. Hạn chế đã biết
 
