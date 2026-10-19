@@ -16,6 +16,7 @@ Trạng thái mọi TC: Designed.
 | TC-ADD-06 | Thêm hai lần liên tiếp cùng mã | Lần 1: mã 03, "Cắt cơ bản", giá 200.000 → thành công. Lần 2: nhập lại y hệt | Lần 1 thành công; lần 2 "Dịch vụ đã tồn tại" | Chỉ có một dòng 03 | US01 / BR01 |
 | TC-ADD-07 | Giá bằng 0 | Mã 03, giá 0 → Lưu | "Dữ liệu không hợp lệ" | Không đổi | US01 / BR03 |
 | TC-ADD-08 | Bấm Hủy | Nhập một phần dữ liệu → Hủy | Về giao diện quản lý dịch vụ, không lưu | Không đổi | US01 / BR15 |
+| TC-ADD-09	| Nhiều lỗi cùng lúc | Mã 07 (trùng), tên để trống, giá -200.000 → Lưu | Chỉ báo “Điền đầy đủ thông tin” (lỗi bắt buộc đứng trước). Sửa tên, giữ giá âm → Lưu → báo “Dữ liệu không hợp lệ”. Sửa giá hợp lệ, giữ mã 07 → Lưu → báo “Dịch vụ đã tồn tại” | Không đổi | US01 / BR04 |
 
 ## 2. Sửa dịch vụ (UC02)
 
