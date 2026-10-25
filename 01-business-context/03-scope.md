@@ -19,7 +19,6 @@ quản lý spa thú cưng nội bộ. Repo này tài liệu hóa hai tầng do t
 | Quản lý công việc | Grooming | Mức hệ thống |
 | **Thêm dịch vụ** | Manager | **Chi tiết** |
 | **Sửa dịch vụ** | Manager | **Chi tiết** |
-| **Xóa / ngừng dịch vụ** | Manager | **Chi tiết** |
 | **Tìm kiếm và xem danh sách dịch vụ** | Manager | **Chi tiết** (use case phụ trợ) |
 | **Thống kê doanh thu theo dịch vụ** + xem hóa đơn chi tiết | Manager | **Chi tiết** |
 | **Thống kê doanh thu theo khách hàng** + xem hóa đơn chi tiết | Manager | **Chi tiết** |
