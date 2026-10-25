@@ -7,17 +7,17 @@ module Quản lý dịch vụ & Báo cáo thống kê (vai trò Manager).
 
 **Tổng quan toàn hệ thống** (hai use case Manage service và View report được tô nổi bật):
 
-[Use case tổng quan](system-use-case-overview.png)
+[Use case tổng quan](system-use-case-overview.svg)
 
 Actor `User` là tổng quát hóa của 4 vai trò (Admin, Manager, Receptionist, Grooming);
-Login là use case dùng chung, Change password và Logout mở rộng Login.
+Login là use case dùng chung; Change password và Logout mở rộng Login.
 
 **Sơ đồ chi tiết** phân rã hai use case của Manager:
 
 | Sơ đồ | Ảnh |
 |---|---|
-| Quản lý dịch vụ | [uc-manage-service.png](uc-manage-service.png) |
-| Xem báo cáo | [uc-view-report.png](uc-view-report.png) |
+| Quản lý dịch vụ | [uc-manage-service.png](uc-manage-service.svg) |
+| Xem báo cáo | [uc-view-report.png](uc-view-report.svg) |
 
 > Sơ đồ chi tiết được vẽ ở giai đoạn trước, còn hiển thị bước đăng nhập (`Manager login`)
 > và actor `Employee`. Sơ đồ tổng quan là bản cập nhật gọn hơn. Phần phân rã nghiệp vụ
