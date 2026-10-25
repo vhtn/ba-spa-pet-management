@@ -73,7 +73,6 @@ cáo thống kê** của vai trò Manager. Dữ liệu module đọc (đơn, hó
 | [04-wireframes](04-wireframes/) | Thiết kế giao diện *(đang bổ sung ảnh)* |
 | [05-data](05-data/) | ERD, data dictionary, schema, dữ liệu mẫu, truy vấn kiểm chứng |
 | [06-uat-scenarios](06-uat-scenarios/) | 42 kịch bản kiểm thử nghiệm thu |
-| [07-improvement-proposals](07-improvement-proposals/) | 10 đề xuất cải tiến |
 | [appendix-technical](appendix-technical/) | Sơ đồ lớp, tuần tự, ghi chú thiết kế (phụ lục) |
 
 **Chạy thử số liệu:** chạy `05-data/schema.sql` → `sample-data.sql` → `report-queries.sql`; kết quả khớp các con số trong use case và UAT (450.000 / 200.000 theo dịch vụ, 350.000 / 300.000 theo khách hàng).
