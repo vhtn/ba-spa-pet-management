@@ -4,7 +4,7 @@ Kịch bản kiểm thử nghiệm thu cho module Quản lý dịch vụ & Báo 
 
 | File | Chức năng | Số TC |
 |---|---|---|
-| [uat-service-management.md](uat-service-management.md) | Thêm, sửa, xóa dịch vụ | 22 |
+| [uat-service-management.md](uat-service-management.md) | Thêm, sửa dịch vụ | 15 |
 | [uat-reports.md](uat-reports.md) | Thống kê theo dịch vụ, khách hàng, ràng buộc dữ liệu | 18 |
 
 Trạng thái: **Designed** (đã thiết kế, chưa chạy trên hệ thống).
