@@ -3,7 +3,7 @@
 
 | | |
 |---|---|
-| **Loại project** | Business analysis / Requirements specification (bài tập lớn nhóm, PTIT) |
+| **Loại project** | Requirements specification (bài tập lớn nhóm, PTIT) |
 | **Vai trò** | Business Analyst, phụ trách module Manager trong nhóm 6 người |
 | **Thời gian** | [tháng/năm - tháng/năm] |
 | **Công cụ** | [Visual Paradigm / draw.io], MySQL, Markdown, [Figma/draw.io] |
