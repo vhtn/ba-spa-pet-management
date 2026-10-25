@@ -1,4 +1,4 @@
-# UC05: Xem thống kê doanh thu theo khách hàng
+# UC04: Xem thống kê doanh thu theo khách hàng
 
 | Mục | Nội dung |
 |---|---|
