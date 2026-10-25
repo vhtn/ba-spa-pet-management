@@ -11,7 +11,7 @@ Mỗi quy tắc có mã BR để truy vết tới user story, use case và test 
 | BR02 | Bắt buộc nhập: mã, tên, đơn vị, giá, trạng thái. Mô tả là tùy chọn | Thiếu các trường này thì dịch vụ không dùng được khi lập đơn | US01, US02 |
 | BR03 | Giá dịch vụ phải là số lớn hơn 0 (đơn vị VNĐ) | Giá âm, bằng 0 hoặc là chữ làm sai tổng tiền và doanh thu | US01, US02 |
 | BR04 | Thứ tự kiểm tra khi lưu: (1) trường bắt buộc, (2) định dạng/giá trị, (3) trùng mã | Thứ tự cố định để mỗi lần chỉ báo một loại lỗi, thông báo dễ hiểu | US01, US02 |
-| BR05 | Dịch vụ đã xuất hiện trong ít nhất một chi tiết đơn dịch vụ **không bị xóa khỏi CSDL**: hệ thống chuyển trạng thái sang "Ngừng hoạt động" và thông báo cho quản lý. Dịch vụ chưa từng được dùng thì xóa hẳn | Bảo toàn lịch sử sử dụng và toàn vẹn khóa ngoại; báo cáo quá khứ vẫn đúng | US03 |
+| BR05 | Dịch vụ không còn phù hợp được chuyển sang “Ngừng hoạt động” bằng cập nhật trạng thái; dữ liệu và lịch sử sử dụng giữ nguyên | Bảo toàn lịch sử sử dụng và toàn vẹn khóa ngoại; tránh mất dữ liệu do xóa nhầm | US03 |
 | BR06 | Giá được lưu cùng chi tiết đơn tại thời điểm sử dụng. Sửa giá dịch vụ chỉ ảnh hưởng đơn tạo sau đó | `price` nằm trong bảng chi tiết đơn (ERD sau mịn hóa); nếu tra giá hiện tại thì sửa giá sẽ làm đổi doanh thu quá khứ | US02, US05 |
 | BR07 | Trạng thái dịch vụ gồm "Đang hoạt động" và "Ngừng hoạt động"; sửa được qua danh sách chọn, cho phép kích hoạt lại dịch vụ đã ngừng | Tránh phải tạo mới dịch vụ khi spa muốn mở bán lại | US02 |
 | BR08 | Tìm kiếm theo mã hoặc tên chứa từ khóa, hiển thị dịch vụ ở mọi trạng thái | Quản lý cần thấy cả dịch vụ đã ngừng để kích hoạt lại hoặc kiểm tra | US04 |
