@@ -1,20 +1,27 @@
 # 03 - Use Cases
 
-Mô hình use case của hệ thống spa thú cưng và đặc tả chi tiết các use case thuộc module Quản lý dịch vụ & Báo cáo thống kê (vai trò Manager).
+Mô hình use case của hệ thống spa thú cưng (mức hệ thống) và đặc tả chi tiết các use case của
+module Quản lý dịch vụ & Báo cáo thống kê (vai trò Manager).
 
 ## Sơ đồ
 
-**Tổng quan toàn hệ thống** (hai use case Manage service và View report là phạm vi của tôi):
+**Tổng quan toàn hệ thống** (hai use case Manage service và View report được tô nổi bật):
 
-![Use case tổng quan](system-use-case-overview.svg)
+<!-- ![Use case tổng quan](system-use-case-overview.png) -->
 
-Actor "User" là tổng quát hoá 4 vai trò (Admin, Manager, Receptionist, Grooming);
+Actor `User` là tổng quát hóa của 4 vai trò (Admin, Manager, Receptionist, Grooming);
 Login là use case dùng chung, Change password và Logout mở rộng Login.
 
-| Sơ đồ chi tiết | Ảnh |
+**Sơ đồ chi tiết** phân rã hai use case của Manager:
+
+| Sơ đồ | Ảnh |
 |---|---|
-| Quản lý dịch vụ | [uc-manage-service.svg](uc-manage-service.svg) |
-| Xem báo cáo | [uc-view-report.svg](uc-view-report.svg) |
+| Quản lý dịch vụ | [uc-manage-service.png](uc-manage-service.png) |
+| Xem báo cáo | [uc-view-report.png](uc-view-report.png) |
+
+> Sơ đồ chi tiết được vẽ ở giai đoạn trước, còn hiển thị bước đăng nhập (`Manager login`)
+> và actor `Employee`. Sơ đồ tổng quan là bản cập nhật gọn hơn. Phần phân rã nghiệp vụ
+> (thêm/sửa/xóa, thống kê) giống nhau ở cả hai.
 
 ## Đặc tả use case
 
@@ -26,8 +33,10 @@ Login là use case dùng chung, Change password và Logout mở rộng Login.
 | [UC04](UC04-view-service-report.md) | Thống kê doanh thu theo dịch vụ | Manager | US05, US06, US09 | BR09-BR13 |
 | [UC05](UC05-view-client-report.md) | Thống kê doanh thu theo khách hàng | Manager | US07, US08, US09 | BR09-BR13 |
 
-Các use case Search service và View list service (có trong sơ đồ chi tiết) được mô tả như các bước tìm kiếm trong UC02 và UC03, nên không có file riêng. US10 (giới hạn truy cập) áp dụng cho cả 5 use case thông qua tiền điều kiện.
+Search service và View list service được mô tả như các bước tìm kiếm trong UC02 và UC03.
+US10 (giới hạn truy cập) áp dụng cho cả 5 use case thông qua tiền điều kiện.
+Các use case của Admin, Lễ tân, Chăm sóc ở mức tổng quan, xem [system overview](../01-business-context/04-system-overview.md).
 
 ## Quy ước
-- Số liệu lấy từ bộ dữ liệu mẫu ở [05-data](../05-data/sample-data.sql).
+- Số liệu lấy từ [bộ dữ liệu mẫu](../05-data/sample-data.sql).
 - Ngày hiển thị dd/mm/yyyy; tiền tính bằng VNĐ.
