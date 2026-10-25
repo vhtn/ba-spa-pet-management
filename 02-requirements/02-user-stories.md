@@ -6,7 +6,7 @@ Tất cả story có actor là **Manager**. Ưu tiên theo MoSCoW.
 |---|---|---|---|
 | US01 | Thêm dịch vụ | UC01 | BR01-BR04 |
 | US02 | Sửa dịch vụ | UC02 | BR01-BR04, BR06, BR07 |
-| US03 | Xóa/ngừng dịch vụ | UC03 | BR05 |
+| US03 | Ngừng dịch vụ | UC03 | BR05 |
 | US04 | Tìm kiếm dịch vụ | UC02, UC03 | BR08, BR16 |
 | US05 | Thống kê doanh thu theo dịch vụ | UC04 | BR06, BR09, BR10, BR12, BR16 |
 | US06 | Xem hóa đơn chi tiết của một dịch vụ | UC04 | BR13 |
@@ -44,17 +44,17 @@ Là người quản lý, tôi muốn sửa thông tin dịch vụ để bảng g
   được kích hoạt lại.
 - Given tôi bấm Hủy, Then về màn hình quản lý dịch vụ, dữ liệu không đổi.
 
-### US03: Xóa/ngừng dịch vụ
-Là người quản lý, tôi muốn xóa một dịch vụ không còn phù hợp mà không làm mất lịch sử doanh thu, để báo cáo quá khứ vẫn chính xác.
+### US03: Cập nhật trạng thái dịch vụ
+Là người quản lý, tôi muốn chuyển một dịch vụ không còn phù hợp sang "Ngừng hoạt động" (hoặc mở
+lại), để không mất lịch sử doanh thu và báo cáo quá khứ vẫn chính xác.
 
 **Acceptance criteria**
-- Given tôi chọn xóa một dịch vụ, Then hệ thống hiện hộp thoại "Xác nhận xóa dịch vụ" với nút Xác nhận và Hủy.
-- Given dịch vụ chưa từng được dùng, When bấm Xác nhận, Then dịch vụ bị xóa khỏi CSDL
-  và hiển thị "Xóa dịch vụ thành công".
-- Given dịch vụ đã có trong ít nhất một chi tiết đơn, When bấm Xác nhận, Then dịch vụ
-  chuyển sang "Ngừng hoạt động", không bị xóa, và hệ thống thông báo rõ điều này.
+- Given tôi chọn một dịch vụ đang hoạt động, Then hệ thống hiện hộp thoại "Xác nhận chuyển dịch vụ
+  sang Ngừng hoạt động" với nút Xác nhận và Hủy.
+- Given tôi bấm Xác nhận, Then trạng thái đổi thành "Ngừng hoạt động", hiển thị "Cập nhật trạng thái
+  dịch vụ thành công"; dịch vụ **vẫn còn** trong CSDL và trong báo cáo quá khứ.
+- Given dịch vụ đang ngừng hoạt động, When tôi xác nhận chuyển lại, Then trạng thái thành "Đang hoạt động".
 - Given tôi bấm Hủy ở hộp thoại, Then về màn hình quản lý dịch vụ, dữ liệu không đổi.
-
 ### US04: Tìm kiếm dịch vụ
 Là người quản lý, tôi muốn tìm dịch vụ theo mã hoặc tên, để nhanh chóng chọn đúng dịch vụ cần sửa hoặc xóa.
 
