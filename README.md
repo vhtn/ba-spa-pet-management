@@ -61,9 +61,7 @@ cáo thống kê** của vai trò Manager. Dữ liệu module đọc (đơn, hó
 | Cột chi tiết hóa đơn đổi thành **"Thành tiền dịch vụ"** | Tổng chi tiết khớp doanh thu ở bảng thống kê, đối chiếu được (BR13) |
 | Lọc kỳ theo ngày thanh toán, dạng nửa khoảng `[bắt đầu, kết thúc + 1)` | `paymentDay` là timestamp; `BETWEEN` sẽ bỏ sót hóa đơn cuối ngày cuối kỳ (BR09) |
 
-**Mâu thuẫn đã phát hiện và xử lý khi viết lại tài liệu nhóm:** số liệu tiền không khớp giữa
-kịch bản và bảng; test case xóa tên "hủy" nhưng thao tác "xác nhận"; test báo cáo có dữ liệu
-nhưng mong đợi "không có dữ liệu"; lỗi tên phương thức trong sơ đồ; ERD thiếu vai trò, v.v.
+**Mâu thuẫn đã phát hiện và xử lý khi viết lại tài liệu nhóm:** số liệu tiền không khớp giữa kịch bản và bảng; test case xóa tên "hủy" nhưng thao tác "xác nhận"; test báo cáo có dữ liệu nhưng mong đợi "không có dữ liệu"; lỗi tên phương thức trong sơ đồ; ERD thiếu vai trò, v.v.
 
 ## 6. Mục lục tài liệu
 
@@ -78,8 +76,7 @@ nhưng mong đợi "không có dữ liệu"; lỗi tên phương thức trong s�
 | [07-improvement-proposals](07-improvement-proposals/) | 10 đề xuất cải tiến |
 | [appendix-technical](appendix-technical/) | Sơ đồ lớp, tuần tự, ghi chú thiết kế (phụ lục) |
 
-**Chạy thử số liệu:** chạy `05-data/schema.sql` → `sample-data.sql` → `report-queries.sql`; kết quả
-khớp các con số trong use case và UAT (450.000 / 200.000 theo dịch vụ, 350.000 / 300.000 theo khách hàng).
+**Chạy thử số liệu:** chạy `05-data/schema.sql` → `sample-data.sql` → `report-queries.sql`; kết quả khớp các con số trong use case và UAT (450.000 / 200.000 theo dịch vụ, 350.000 / 300.000 theo khách hàng).
 
 ## 7. Bài học rút ra
 
@@ -91,4 +88,4 @@ khớp các con số trong use case và UAT (450.000 / 200.000 theo dịch vụ,
 
 ## 8. Liên hệ
 
-[Họ tên] · [email] · [LinkedIn]
+VŨ THỊ HẢI THANH · 0968226005 · vhthanh2308@gmail.com
